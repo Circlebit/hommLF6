@@ -1,0 +1,5 @@
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_2\bin\Debug\Aufgabe_2.exe.config
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_2\bin\Debug\Aufgabe_2.exe
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_2\bin\Debug\Aufgabe_2.pdb
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_2\obj\Debug\Aufgabe_2.exe
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_2\obj\Debug\Aufgabe_2.pdb

@@ -1,0 +1,6 @@
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_1\bin\Debug\Aufgabe_1.exe.config
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_1\obj\Debug\Aufgabe_1.csprojResolveAssemblyReference.cache
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_1\bin\Debug\Aufgabe_1.exe
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_1\bin\Debug\Aufgabe_1.pdb
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_1\obj\Debug\Aufgabe_1.exe
+M:\Visual Studio 2015\Projects\Ein- und Ausgaben\Aufgabe_1\obj\Debug\Aufgabe_1.pdb

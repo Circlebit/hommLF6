@@ -1,0 +1,5 @@
+M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_4\bin\Debug\Aufgabe_4.exe.config
+M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_4\bin\Debug\Aufgabe_4.exe
+M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_4\bin\Debug\Aufgabe_4.pdb
+M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_4\obj\Debug\Aufgabe_4.exe
+M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_4\obj\Debug\Aufgabe_4.pdb

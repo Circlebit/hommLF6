@@ -1,0 +1,6 @@
+M:\Visual Studio 2015\Projects\operator\operator\bin\Debug\@operator.exe.config
+M:\Visual Studio 2015\Projects\operator\operator\obj\Debug\operator.csprojResolveAssemblyReference.cache
+M:\Visual Studio 2015\Projects\operator\operator\bin\Debug\@operator.exe
+M:\Visual Studio 2015\Projects\operator\operator\bin\Debug\@operator.pdb
+M:\Visual Studio 2015\Projects\operator\operator\obj\Debug\@operator.exe
+M:\Visual Studio 2015\Projects\operator\operator\obj\Debug\@operator.pdb
