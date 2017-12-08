@@ -21,6 +21,10 @@ namespace Aufgabe_6
             {
                 Console.WriteLine("Geraden sind parallel. Kein Schnittpunkt!");
             }
+            else
+            {
+
+            }
 
         }
     }

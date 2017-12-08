@@ -3,3 +3,10 @@ M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_2\bin\Debug\Aufgabe_2.exe
 M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_2\bin\Debug\Aufgabe_2.pdb
 M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_2\obj\Debug\Aufgabe_2.exe
 M:\Visual Studio 2015\Projects\Entscheidungen\Aufgabe_2\obj\Debug\Aufgabe_2.pdb
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\bin\Debug\Aufgabe_2.exe.config
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\bin\Debug\Aufgabe_2.exe
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\bin\Debug\Aufgabe_2.pdb
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\obj\Debug\Aufgabe_2.csprojResolveAssemblyReference.cache
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\obj\Debug\Aufgabe_2.csproj.CoreCompileInputs.cache
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\obj\Debug\Aufgabe_2.exe
+C:\Users\Moshbit\Source\Repos\hommLF6\Entscheidungen\Aufgabe_2\obj\Debug\Aufgabe_2.pdb
