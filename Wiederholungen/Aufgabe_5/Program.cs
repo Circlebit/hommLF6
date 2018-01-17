@@ -13,18 +13,28 @@ namespace Aufgabe_5
             Console.Write("Anfangskapital ak: ");
             double ak = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Zinswert p: ");
+            Console.Write("Zinswert p (in Prozent): ");
             double p = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Laufzeit n (in Jahren): ");
             int n = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("| Laufzeit \t| Zinsen im lfd. Jahr \t| Gesamtkapital \t|");
+            double zinsLastYear = 0;
+            double zinsThisYear = ak * (p / 100);
+            double gesamtKapital = ak;
+
+            // unfertig!
+            Console.WriteLine("\n\r| Laufzeit | Zinsen im lfd. Jahr | Gesamtkapital |");
             for (int line = 1; line <= n; line++)
             {
-                Console.WriteLine($"| {n} \t| \t| \t|");
+                zinsLastYear = zinsThisYear;
+                zinsThisYear = zinsLastYear + zinsThisYear * (p/100);
+                gesamtKapital = gesamtKapital + zinsThisYear;
+
+                Console.Write($"| {line}\t   | {zinsThisYear} \t\t\t | {gesamtKapital}  \t|\n\r");
             }
 
         }
+
     }
 }
