@@ -10,17 +10,21 @@ namespace Aufgabe_7
     {
         static void Main(string[] args)
         {
+            Console.Write("Anfangskapital: ");
             double anfangskapital = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Zinssatz in %: ");
             double zinssatz = Convert.ToDouble(Console.ReadLine());
 
             double kapital = anfangskapital;
             int jahr = 1;
 
-            while(kapital < anfangskapital)
+            while(kapital < anfangskapital*2)
             {
-                kapital += kapital * zinssatz;
+                kapital += kapital * (zinssatz/100);
                 Console.WriteLine($"Jahr: {jahr} \t Kapital: {kapital}");
+                jahr++;
             }
+            Console.WriteLine($"Laufzeit: {jahr-1} Jahre");
         }
     }
 }
