@@ -12,17 +12,19 @@ namespace Hypothekendarlehen
         #region Properties
         public double SumLent { get; set; }
         public double RepaymentRate { get; set; }
-        public double InterestRateInPercent { get; set; }
-        public double InterestRate { get => InterestRateInPercent / 100; }
+        public double InterestRate { get; set; }
+        //public double InterestRate { get => InterestRateInPercent / 100; }
+        public double MonthlyRate { get => CalcMonthlyRate(SumLent, RepaymentRate, InterestRate); }
 
         public DataTable TimeCourse { get; private set; }
         #endregion
 
-        public Mortgage(double sumLent, double repaymentRate, double interestRateInPercent)
+        public Mortgage(double sumLent, double repaymentRate, double interestRate)
         {
             SumLent = sumLent;
             RepaymentRate = repaymentRate;
-            InterestRateInPercent = interestRateInPercent;
+            InterestRate = interestRate;
+            TimeCourse = CalcTimeCourse(SumLent, RepaymentRate, InterestRate);
         }
 
 
@@ -30,15 +32,28 @@ namespace Hypothekendarlehen
         {
             int month = 1;
             double remainingDebtAtBeginning = sumLent;
-            double interestAmount = InterestAmount(remainingDebtAtBeginning, interestRate);
-
+            double interestAmount;
+            double repaymentAmount;
+            double remainingDebtAtEnd;
             var timeCourse = newTimeCourseTable();
 
             do
             {
+                interestAmount = CalcInterestAmount(remainingDebtAtBeginning, interestRate);
+                repaymentAmount = CalcRepaymentAmount(MonthlyRate, interestAmount);
+                remainingDebtAtEnd = CalcRemainingDebtForNextMonth(remainingDebtAtBeginning, repaymentAmount);
+
                 var newRow = timeCourse.NewRow();
-                
-            } while ( XXXXXXXXXXXXXX );
+                newRow["Month"] = month;
+                newRow["RemainingDebtAtBeginning"] = remainingDebtAtBeginning;
+                newRow["RepaymentAmount"] = repaymentAmount;
+                newRow["InterestAmount"] = interestAmount;
+                newRow["RemainingDebtAtEnd"] = remainingDebtAtEnd;
+                timeCourse.Rows.Add(newRow);
+
+                month++;
+                remainingDebtAtBeginning = remainingDebtAtEnd;
+            } while ( remainingDebtAtEnd > 0 );
 
             return timeCourse;
         }
@@ -55,22 +70,22 @@ namespace Hypothekendarlehen
         }
 
         #region Calculation Methods
-        public static double MonthlyRate(double sumLent, double repaymentRate, double interestRate)
+        public static double CalcMonthlyRate(double sumLent, double repaymentRate, double interestRate)
         {
             return (sumLent * (repaymentRate + interestRate)) / (100 * 12);
         }
 
-        public static double InterestAmount(double remainingDebt, double interestRate)
+        public static double CalcInterestAmount(double remainingDebt, double interestRate)
         {
             return (remainingDebt * interestRate) / (100 * 12);
         }
 
-        public static double RepaymentAmount(double monthlyRate, double interestAmount)
+        public static double CalcRepaymentAmount(double monthlyRate, double interestAmount)
         {
             return monthlyRate - interestAmount;
         }
 
-        public static double RemainingDebtForNextMonth(double remainingDebtPrevious, double repaymentAmount)
+        public static double CalcRemainingDebtForNextMonth(double remainingDebtPrevious, double repaymentAmount)
         {
             return remainingDebtPrevious - repaymentAmount;
         }
