@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Währungsumrechnung", "Währungsumrechnung\Währungsumrechnung.csproj", "{286007D6-767E-4006-8CBB-A0ACDB3898B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypothekendarlehen", "Hypothekendarlehen\Hypothekendarlehen.csproj", "{33D07031-230B-40FB-B806-8D59C054BE53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{286007D6-767E-4006-8CBB-A0ACDB3898B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{286007D6-767E-4006-8CBB-A0ACDB3898B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{286007D6-767E-4006-8CBB-A0ACDB3898B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D07031-230B-40FB-B806-8D59C054BE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D07031-230B-40FB-B806-8D59C054BE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D07031-230B-40FB-B806-8D59C054BE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D07031-230B-40FB-B806-8D59C054BE53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
