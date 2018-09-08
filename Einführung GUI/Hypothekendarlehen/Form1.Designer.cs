@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox_SumLent = new System.Windows.Forms.TextBox();
+            this.textBox_InterestRate = new System.Windows.Forms.TextBox();
             this.textBox_RepaymentRate = new System.Windows.Forms.TextBox();
-            this.textBox_InterestRateInPercent = new System.Windows.Forms.TextBox();
             this.label_SumLent = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_InterestRateInPercent = new System.Windows.Forms.Label();
@@ -42,6 +42,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -56,7 +58,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(15, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(686, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(649, 254);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox_SumLent
@@ -66,19 +68,19 @@
             this.textBox_SumLent.Size = new System.Drawing.Size(100, 20);
             this.textBox_SumLent.TabIndex = 1;
             // 
+            // textBox_InterestRate
+            // 
+            this.textBox_InterestRate.Location = new System.Drawing.Point(153, 28);
+            this.textBox_InterestRate.Name = "textBox_InterestRate";
+            this.textBox_InterestRate.Size = new System.Drawing.Size(100, 20);
+            this.textBox_InterestRate.TabIndex = 2;
+            // 
             // textBox_RepaymentRate
             // 
-            this.textBox_RepaymentRate.Location = new System.Drawing.Point(153, 28);
+            this.textBox_RepaymentRate.Location = new System.Drawing.Point(291, 28);
             this.textBox_RepaymentRate.Name = "textBox_RepaymentRate";
             this.textBox_RepaymentRate.Size = new System.Drawing.Size(100, 20);
-            this.textBox_RepaymentRate.TabIndex = 2;
-            // 
-            // textBox_InterestRateInPercent
-            // 
-            this.textBox_InterestRateInPercent.Location = new System.Drawing.Point(291, 28);
-            this.textBox_InterestRateInPercent.Name = "textBox_InterestRateInPercent";
-            this.textBox_InterestRateInPercent.Size = new System.Drawing.Size(100, 20);
-            this.textBox_InterestRateInPercent.TabIndex = 3;
+            this.textBox_RepaymentRate.TabIndex = 3;
             // 
             // label_SumLent
             // 
@@ -121,13 +123,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 365);
+            this.ClientSize = new System.Drawing.Size(691, 365);
             this.Controls.Add(this.button_CalcMortgage);
             this.Controls.Add(this.label_InterestRateInPercent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_SumLent);
-            this.Controls.Add(this.textBox_InterestRateInPercent);
             this.Controls.Add(this.textBox_RepaymentRate);
+            this.Controls.Add(this.textBox_InterestRate);
             this.Controls.Add(this.textBox_SumLent);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -143,8 +145,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox_SumLent;
+        private System.Windows.Forms.TextBox textBox_InterestRate;
         private System.Windows.Forms.TextBox textBox_RepaymentRate;
-        private System.Windows.Forms.TextBox textBox_InterestRateInPercent;
         private System.Windows.Forms.Label label_SumLent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_InterestRateInPercent;

@@ -35,7 +35,7 @@ namespace Debugging
             else if (z > 1)
             {
 
-                for (uint i = 2; i <= z; i++)
+                for (uint i = 1; i <= z; i++)
                 {
                     fak *= i;
                 }

@@ -13,17 +13,16 @@ namespace Hypothekendarlehen
         public double SumLent { get; set; }
         public double RepaymentRate { get; set; }
         public double InterestRate { get; set; }
-        //public double InterestRate { get => InterestRateInPercent / 100; }
-        public double MonthlyRate { get => CalcMonthlyRate(SumLent, RepaymentRate, InterestRate); }
+        public double MonthlyRate => CalcMonthlyRate(SumLent, RepaymentRate, InterestRate);
 
         public DataTable TimeCourse { get; private set; }
         #endregion
 
-        public Mortgage(double sumLent, double repaymentRate, double interestRate)
+        public Mortgage(double sumLent, double interestRate, double repaymentRate)
         {
             SumLent = sumLent;
-            RepaymentRate = repaymentRate;
             InterestRate = interestRate;
+            RepaymentRate = repaymentRate;
             TimeCourse = CalcTimeCourse(SumLent, RepaymentRate, InterestRate);
         }
 
@@ -32,15 +31,15 @@ namespace Hypothekendarlehen
         {
             int month = 1;
             double remainingDebtAtBeginning = sumLent;
-            double interestAmount;
-            double repaymentAmount;
             double remainingDebtAtEnd;
+            double interestAmountCum = 0;
             var timeCourse = newTimeCourseTable();
 
             do
             {
-                interestAmount = CalcInterestAmount(remainingDebtAtBeginning, interestRate);
-                repaymentAmount = CalcRepaymentAmount(MonthlyRate, interestAmount);
+                double interestAmount = CalcInterestAmount(remainingDebtAtBeginning, interestRate);
+                interestAmountCum += interestAmount;
+                double repaymentAmount = CalcRepaymentAmount(MonthlyRate, interestAmount);
                 remainingDebtAtEnd = CalcRemainingDebtForNextMonth(remainingDebtAtBeginning, repaymentAmount);
 
                 var newRow = timeCourse.NewRow();
@@ -48,6 +47,7 @@ namespace Hypothekendarlehen
                 newRow["RemainingDebtAtBeginning"] = remainingDebtAtBeginning;
                 newRow["RepaymentAmount"] = repaymentAmount;
                 newRow["InterestAmount"] = interestAmount;
+                newRow["InterestAmountCum"] = interestAmountCum;
                 newRow["RemainingDebtAtEnd"] = remainingDebtAtEnd;
                 timeCourse.Rows.Add(newRow);
 
@@ -65,6 +65,7 @@ namespace Hypothekendarlehen
             newTable.Columns.Add("RemainingDebtAtBeginning", typeof(double));
             newTable.Columns.Add("RepaymentAmount", typeof(double));
             newTable.Columns.Add("InterestAmount", typeof(double));
+            newTable.Columns.Add("InterestAmountCum", typeof(double));
             newTable.Columns.Add("RemainingDebtAtEnd", typeof(double));
             return newTable;
         }

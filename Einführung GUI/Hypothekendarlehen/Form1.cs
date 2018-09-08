@@ -28,9 +28,9 @@ namespace Hypothekendarlehen
         private void button_CalcMortgage_Click(object sender, EventArgs e)
         {
             double sumLent = double.Parse(textBox_SumLent.Text);
+            double interestRate = double.Parse(textBox_InterestRate.Text);
             double repaymentRate = double.Parse(textBox_RepaymentRate.Text);
-            double interestRate = double.Parse(textBox_InterestRateInPercent.Text);
-            Mortgage = new Mortgage(sumLent, repaymentRate, interestRate);
+            Mortgage = new Mortgage(sumLent, interestRate, repaymentRate);
 
             var bindingSource1 = new BindingSource();
             bindingSource1.DataSource = Mortgage.TimeCourse;
