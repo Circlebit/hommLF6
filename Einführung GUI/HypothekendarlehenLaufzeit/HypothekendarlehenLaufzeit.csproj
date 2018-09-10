@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FCBFD48F-360B-4358-A270-92B6A0A80EA6}</ProjectGuid>
+    <ProjectGuid>{33D07031-230B-40FB-B806-8D59C054BE53}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Hypothekendarlehen</RootNamespace>
-    <AssemblyName>Hypothekendarlehen</AssemblyName>
+    <RootNamespace>HypothekendarlehenLaufzeit</RootNamespace>
+    <AssemblyName>HypothekendarlehenLaufzeit</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
