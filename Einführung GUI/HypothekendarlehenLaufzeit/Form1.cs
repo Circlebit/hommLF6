@@ -37,5 +37,10 @@ namespace HypothekendarlehenLaufzeit
             dataGridView1.Columns["RemainingDebtAtEnd"].HeaderText = "Retschuld neu";
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
